@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+<h3><b>Yazılım bilimi bloguna hoşgeldiniz </b></h3>
+<p>Bu blogta geliştiriciler olarak yazılarınızı paylaşabilirsiniz</p>
+</div>
+
+<p>
+    {% if request.user.is_authenticated %}
+    Giriş Yapılmış,{{request.user.username}} 
+    {% else %}
+    Giriş Yapılmamış
+    {% endif %}
+</p>
+<!--{% if number1 == 20 %}
+    <p>Sayımız 20ye eşit</p>
+
+{% else %}
+<p>Sayımız 20ye eşit değil</p>
+{% endif %}-->
+<!--<ul>
+{% for number in numbers %}
+    <li>{{number}}</li>
+{% endfor %}
+</ul>
+-->
+{% endblock body %}
